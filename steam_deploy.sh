@@ -205,6 +205,8 @@ steamcmd +login "$steam_username" +run_app_build "$manifest_path" +quit || (
       echo
     done
 
+    chown -R build:build BuildOutput
+
     exit 1
   )
 
