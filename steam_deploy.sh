@@ -209,5 +209,6 @@ steamcmd +login "$steam_username" +run_app_build "$manifest_path" +quit || (
   )
 
 chown -R build:build BuildOutput
+chown build:build manifest.vdf depot*.vdf
 
 echo "manifest=${manifest_path}" >> $GITHUB_OUTPUT
